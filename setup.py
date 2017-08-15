@@ -11,10 +11,18 @@ setup(
 	author_email='jmnunezizu@gmail.com',
 	url='https://github.com/jmnunezizu/digger-cli',
 	license='MIT',
-	packages='digger_cli',
-	# install_requires=[
-	# 	'click',
-	# 	# 'click_repl',
-	# 	'discogs_client'
-	# ]
+	packages = [
+		'digger_cli'
+	],
+	install_requires = [
+		'click',
+		'click_repl',
+		'discogs_client'
+	],
+	entry_points = {
+		'console_scripts': [
+			# 'digger-cli = digger_cli.digger:cli',
+			'digger = digger_cli.commands:cli' 
+		]
+	}
 )
